@@ -7,11 +7,11 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build :
 
     runs-on: ubuntu-latest
     defaults:
-      run: 
+        run:   
         working-directory: ./frontend
 
     strategy:
