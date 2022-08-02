@@ -11,14 +11,14 @@ server.get('/',(req,res)=>{
 })
 
 
-/*server.get('/api/articles',(req,res)=>{
-  res.json(articles);
-})*/
-
 server.get('/api/articles',(req,res)=>{
-const article = articles.find((n)=>n._id===req.params.id);
-res.send(article);
-console.log(req.params);
+  res.json(articles);
+})
+
+server.get('/api/articles/:id', (req, res) => {
+  const article = articles.find((n) => n._id === req.params.id);
+  res.send(article);
+  console.log(req.params);
 });
 
 server.listen(5000, console.log('server is working and listening on PORT ${5000}'));
